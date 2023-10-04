@@ -1,0 +1,19 @@
+<form *ngIf="edited_book" (submit)="edit_book()">
+    <label for="title">Title:</label>
+    <input type="text" id="title" [(ngModel)]="edited_book.title" name="title" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" [(ngModel)]="edited_book.author" name="author" required>
+  
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="edited_book.description" name="description" required></textarea>
+  
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" id="image_url" [(ngModel)]="edited_book.image_url" name="image_url" required>
+  
+    <button type="submit">Save edited book</button>
+</form>
+
+<div *ngIf="!edited_book">
+    <h1>Book at this Id does not exist</h1>
+</div>
