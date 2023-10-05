@@ -13,5 +13,6 @@ export class BookListComponent {
 
   remove_book(id: number) {
     this.book_service.remove_book(id);
+    this.books = this.book_service.get_books();
   }
 }
