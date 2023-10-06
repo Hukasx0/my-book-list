@@ -13,3 +13,19 @@
   
     <button type="submit">Add book</button>
 </form>
+<div class="book-container">
+    <div class="book">
+        <div class="book-content">
+          <div class="book-cover">
+            <img [src]="new_book.image_url" [alt]="new_book.title">
+          </div>
+          <div class="book-details">
+            <h1>{{ new_book.title }}</h1>
+            <h3>{{ new_book.author }}</h3>
+            <a >Edit book information</a> <br />
+            <span id="remove_book">Remove book</span>
+          </div>
+        </div>
+        <p class="description">{{ new_book.description }}</p>
+    </div>
+</div>

@@ -13,6 +13,22 @@
   
     <button type="submit">Save edited book</button>
 </form>
+<div class="book-container" *ngIf="edited_book">
+<div class="book">
+    <div class="book-content">
+      <div class="book-cover">
+        <img [src]="edited_book.image_url" [alt]="edited_book.title">
+      </div>
+      <div class="book-details">
+        <h1>{{ edited_book.title }}</h1>
+        <h3>{{ edited_book.author }}</h3>
+        <a >Edit book information</a> <br />
+        <span id="remove_book">Remove book</span>
+      </div>
+    </div>
+    <p class="description">{{ edited_book.description }}</p>
+    </div>
+</div>
 
 <div *ngIf="!edited_book">
     <h1>Book at this Id does not exist</h1>
